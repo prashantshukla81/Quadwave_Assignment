@@ -1,0 +1,55 @@
+﻿@using Quadwave.Models;
+@model List<customer>
+@{
+    ViewBag.Title = "EditPage";
+}
+
+<h2>Edit</h2>
+<h4>Person:</h4>
+
+<style>
+    .r {
+        min-width: 600px;
+    }
+
+    .a {
+        width: 100%;
+    }
+</style>
+<div class="container-fluid">
+    <dvi class="row r bg-light">
+        <div class="col-sm-8">
+            @foreach (customer cu in Model)
+            {
+                <form action="" method="post">
+                    <h4>First Name</h4>
+                    <input type="text" name="fname" value="@cu.fname" />
+                    <h4>Last Name</h4>
+                    <input type="text" name="lname" value="@cu.lname" /><br /><br />
+                    <table class="table-bordered a">
+                        <tr>
+                            <th class="active b">Address List</th>
+                        </tr>
+                        <tr>
+                            <th class="active">City</th>
+                            <th class="active">Street Address</th>
+                            <th class="active">Phone</th>
+                            <th class="active"><center><i class="glyphicon glyphicon-plus" style="color:white; background:blue;"></i></center></th>
+                        </tr>
+                        <tr>
+                            <td>@cu.city</td>
+                            <td>@cu.address</td>
+                            <td>@cu.number</td>
+                            <td><i class="glyphicon glyphicon-pencil" style="color:black; background:white;"></i><i class="glyphicon glyphicon-trash" style="color: white; background: darkred;"></i></td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="save" />
+                    <a href="/home/index"><h5 style="color:blue;">Back to list</h5></a>
+
+                </form>
+            }
+
+            </div>
+
+    </dvi>
+</div>

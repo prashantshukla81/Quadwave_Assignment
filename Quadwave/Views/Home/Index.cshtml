@@ -1,0 +1,66 @@
+﻿@using Quadwave.Models;
+@model List<customer>
+@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .a{
+        margin-top:100px;
+        text-align:center;
+
+    }
+    td{
+        text-align:center;
+        margin-left:10px;
+    }
+    th {
+        text-align: center;
+    }
+    .add{
+        text-align:left;
+        margin-left:500px;
+        margin-top:100px;
+     
+    }
+
+</style>
+<table>
+    <tr><th> <a href="/home/AddCustomer"><input type="button" value="Add Customer" class="btn btn-primary add" /></a></th></tr>
+</table>
+
+<table class="table-striped table-bordered a">
+   
+    <tr>
+        <th>Customer id</th>
+        <th>Customer Name</th>
+        <th>Countory</th>
+        <th>Created Date</th>
+        <th>Edit
+        <th>
+
+    </tr>
+    @foreach (customer cu in Model)
+    {
+        <tr>
+            <td>
+                @cu.customer_id
+            </td>
+
+            <td>
+                @cu.customer_name
+            </td>
+            <td>
+                @cu.country
+            </td>
+            <td>
+                @cu.customer_date
+            </td>
+            <td>
+                <a href="/home/EditPage?cid=@cu.customer_id"> <input type="button" value="Edit" class="btn btn-primary" /></a>   <a href="/home/deletePage?cid=@cu.customer_id"> <input type="button" value="Delete" class="btn btn-warning" /></a><a href="/home/ViewPage?cid=@cu.customer_id"> <input type="button" value="View" class="btn btn-info" /></a>
+            </td>
+        </tr>
+    }
+</table>
+
+
+   

@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "AddCustomer";
+}
+
+<h2>AddCustomer</h2>
+<style>
+    ::placeholder{
+        color:black;
+    }
+    .a{
+        height:50px;
+        width:200px;
+        
+    }
+    h4{
+        color:blue;
+    }
+</style>
+<div class="col-sm-5 table-bordered border-2 ">
+    <form action="" method="post">
+        <br />
+        <h4>Customer name:</h4>
+        <input type="text" name="name" placeholder="Enter customer Name" class="a" /><br />
+        <br />
+        <h4>Countory:</h4>
+        <input type="text" name="countory" placeholder="Countory name" class="a" /><br /><br />
+        <h4>First Name:</h4>
+        <input type="text" name="fname" placeholder="enter your first name" class="a" /><br /><br />
+        <h4>Last Name:</h4>
+        <input type="text" name="lname" placeholder="enter last first name" class="a" /><br /><br />
+        <h4>city:</h4>
+        <input type="text" name="city" placeholder="enter your city" class="a" /><br /><br />
+        <h4>Street address:</h4>
+        <textarea name="address" placeholder="enter your address" cols="5" class="a"></textarea><br /><br />
+        <h4>Contact Number:</h4>
+        <input type="number" name="number" placeholder="enter your mobile name" class="a" /><br /><br />
+        <input type="submit" value="save" class="btn btn-primary" />
+    </form>
+</div>
